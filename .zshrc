@@ -6,10 +6,15 @@
   export SCALA_HOME=/usr/local/share/scala-2.12.6
   export SPARK_HOME=/usr/local/share/spark
   export SBT_HOME=/usr/local/share/sbt
-  export HADOOP_HOME=/usr/local/share/hadoop
+  export HADOOP_HOME=/usr/local/hadoop
+  export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
   export ANACONDA_HOME=/home/yiddi/anaconda3
+  export ZOOKEEPER_HOME=/usr/local/zookeeper
+  export HBASE_HOME=/usr/local/hadoop/hbase
+  export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
   
-  export PATH=$HOME/bin:$SBT_HOME/bin:$ANACONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$PATH
+  export PATH=$HBASE_HOME/bin:$HOME/bin:$SBT_HOME/bin:$ANACONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SCALA_HOME/bin:$PATH
   
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -106,14 +111,23 @@ xmodmap ~/.Xmodmap
 #
 # yiddi: for expressvpn
 alias exphk4="expressvpn connect \"hk4\""
+alias exphk5="expressvpn connect \"hk5\""
 alias exphk1="expressvpn connect \"hk1\""
+alias expjp1="expressvpn connect \"jpto1\""
+alias expjp2="expressvpn connect \"jpto2\""
 alias exps="expressvpn connect \"smart\""
+alias expusla4="expressvpn connect \"usla4\""
+alias expusla5="expressvpn connect \"usla5\""
 alias expsg="expressvpn connect \"sgju\""
-alias exptw1="expressvpn connect \"tw1\""
-alias expuk="expressvpn connect \"ukel\""
+alias exptw="expressvpn connect \"tw\""
+alias expuk1="expressvpn connect \"ukel\""
+alias expuk2="expressvpn connect \"ukwe\""
 alias expls="expressvpn list"
 alias expd="expressvpn disconnect"
 alias expr="expressvpn refresh"
+
+# yiddi: elicpse
+alias eclp="/home/yiddi/eclipse/jee-2018-093/eclipse/eclipse"
 
 # yiddi: emacs
 alias emc="emacsclient --create-frame --no-wait"
@@ -142,6 +156,11 @@ alias rdf="redshift"
 
 # yiddi: jupyter notebook
 alias jnb="jupyter notebook"
+
+# yiddi: for kaggle
+alias kgc="kg config -g -u yiddishkop@gmail.com -p yl7130201 -c"
+alias kgd="kg download"
+
 #
 # yiddi: add to support prezto
 # source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
